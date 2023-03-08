@@ -38,7 +38,7 @@ const Locations = () => {
         <>
             <section className="w-full mt-12">
             <h2 className="text-center w-full text-gray-200 font-semibold text-4xl mb-10">Locations</h2>
-            <div className="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 px-8 mx-auto xl:max-w-[1200px] 2xl:max-w-[1800px]">
+            <div className="w-full grid grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-4 px-8 mx-auto xl:max-w-[1200px] 3xl:max-w-[1800px]">
             {locations.map((location) => (
                 <Location location={location}/>
               

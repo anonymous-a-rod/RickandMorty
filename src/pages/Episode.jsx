@@ -36,7 +36,7 @@ const Episode = () => {
               
             )}
             </div>
-            {episode && <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+            {episode && <div className="w-full grid grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-4 px-8 mx-auto xl:max-w-[1200px] 3xl:max-w-[1800px]">
               {episode.characters?.map((resident) => (
                   <Resident
                     resident={resident}
