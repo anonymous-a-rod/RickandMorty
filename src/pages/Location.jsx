@@ -4,10 +4,13 @@ import Resident from "../components/Resident";
 
 const Location = () => {
     const [info, setInfo] = useState(null)
-
+    const [url, setUrl] = useState(null);
+    const [number, setNumber] = useState(null);
     const param = useParams().LocationId;
 
     console.log(info)
+
+
 
     useEffect(()=>{
         async function fetchData(){
@@ -22,15 +25,35 @@ const Location = () => {
         fetchData()
     },[param])
 
+
+
+
+    useEffect(()=>{
+        if(info){
+        const randomNumber = Math.floor(Math.random() * info.residents?.length)
+        setUrl(info.residents[randomNumber])    
+        }
+        
+    },[info])
+
+    useEffect(()=>{
+        if(url){
+          const number = url.split("/").pop();
+        setNumber(number)  
+        }
+        
+    },[url])
+    console.log("number")
+    console.log(number)
     return ( 
         <section>
-            hello
             <div className="container mx-auto py-10">
             {info && (
                 <div className="mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={info.id}>
                 <div className="md:flex">
-                  <div className="md:flex-shrink-0">
-                  </div>
+                <div className="md:flex-shrink-0">
+                <img className="h-48 w-full object-cover md:h-full md:w-48" src={`https://rickandmortyapi.com/api/character/avatar/${number}.jpeg`} alt={info.name} />
+                </div>
                   <div className="p-8">
                     <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{info.name}</div>
                     <p className="mt-2 text-gray-500">Type: {info.type}</p>
@@ -38,10 +61,6 @@ const Location = () => {
                     <p className="mt-2 text-gray-500">Residents: {info.residents.length}</p>
                   </div>
                 </div>
-                <p className="text-gray-500 text-sm mt-4 mb-2">Additional information:</p>
-                <ul className="list-disc ml-8 mb-4">
-                  <li>Created: {info.created}</li>
-                </ul>
               </div>
               
             )}
