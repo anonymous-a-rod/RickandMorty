@@ -30,7 +30,7 @@ const Character = ({resident}) => {
         >
             <div className="md:flex">
                 <div className="md:flex-shrink-0">
-                    <img className="h-48 w-full object-cover md:h-full md:w-48" src={info.image} alt={info.name} />
+                    <img className="h-48 w-full object-cover md:h-60 md:w-52" src={info.image} alt={info.name} />
                 </div>
                 <div className="p-8">
                 <div className="uppercase tracking-wide text-md mb-4 text-indigo-500 font-semibold">{info.name}</div>
@@ -38,7 +38,8 @@ const Character = ({resident}) => {
                         <FaCircle className={`inline text-md p-[3px] mr-1 mb-1 ${info.status.toLowerCase() === "alive"? "text-green-500" : info.status.toLowerCase() === "dead"? "text-red-500" : "text-yellow-500"}`}/> 
                         {info.status} - {info.species}
                     </p>
-                    <p className="mt-2 text-gray-300">Last known location: {info.location.name}</p>
+                    <p className="mt-2 text-gray-300"><span className="text-gray-500">First seen:</span><br />{info.origin.name}</p>
+                    <p className="mt-2 text-gray-300"><span className="text-gray-500">Last known location:</span><br />{info.location.name}</p>
                 </div>
             </div>
         </div>

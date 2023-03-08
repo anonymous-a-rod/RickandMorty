@@ -35,9 +35,9 @@ const Character = () => {
                 <div className="w-full md:w-1/2">
                     <h2 className="text-3xl font-bold mb-5">{info.name}</h2>
                     <div className="mb-5">
-                    <span className="font-bold">Status:</span> {info.status}
+                    <span className="font-bold">Status:</span> 
                     <FaCircle className={`inline text-md p-[3px] ml-1 mr-1 mb-[2px] ${info.status.toLowerCase() === "alive"? "text-green-500" : info.status.toLowerCase() === "dead"? "text-red-500" : "text-yellow-500"}`}/>
-                    
+                    {info.status}
                     </div>
                     <div className="mb-5">
                     <span className="font-bold">Species:</span> {info.species}

@@ -12,15 +12,16 @@ const Character = ({character}) => {
         >
             <div className="md:flex">
                 <div className="md:flex-shrink-0">
-                <img className="h-48 w-full object-cover md:h-full md:w-48" src={character.image} alt={character.name} />
+                    <img className="h-48 w-full object-cover md:h-60 md:w-52" src={character.image} alt={character.name} />
                 </div>
                 <div className="p-8">
                 <div className="uppercase tracking-wide text-md mb-4 text-indigo-500 font-semibold">{character.name}</div>
-                <p className="mt-2 text-gray-300">
-                    <FaCircle className={`inline text-md p-[3px] mr-1 mb-1 ${character.status.toLowerCase() === "alive"? "text-green-500" : character.status.toLowerCase() === "dead"? "text-red-500" : "text-yellow-500"}`}/> 
-                    {character.status} - {character.species}
-                </p>
-                <p className="mt-2 text-gray-300">Last known location: {character.location.name}</p>
+                    <p className="mt-2 text-gray-300">
+                        <FaCircle className={`inline text-md p-[3px] mr-1 mb-1 ${character.status.toLowerCase() === "alive"? "text-green-500" : character.status.toLowerCase() === "dead"? "text-red-500" : "text-yellow-500"}`}/> 
+                        {character.status} - {character.species}
+                    </p>
+                    <p className="mt-2 text-gray-300"><span className="text-gray-500">First seen:</span><br />{character.origin.name}</p>
+                    <p className="mt-2 text-gray-300"><span className="text-gray-500">Last known location:</span><br />{character.location.name}</p>
                 </div>
             </div>
         </div>
