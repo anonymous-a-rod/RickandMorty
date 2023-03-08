@@ -22,7 +22,6 @@ const Episode = ({episode}) => {
         
     },[url])
 
-    console.log(number)
     return ( 
         <>
         <div 

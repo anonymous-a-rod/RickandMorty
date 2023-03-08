@@ -34,8 +34,6 @@ const Locations = () => {
           });
     }
 
-    console.log(locations)
-
     return ( 
         <>
             <section className="w-full mt-12">

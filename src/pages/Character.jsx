@@ -4,10 +4,7 @@ import { FaCircle } from "react-icons/fa";
 
 const Character = () => {
     const [info, setInfo] = useState(null)
-
     const param = useParams().CharacterId;
-
-    console.log(info)
 
     useEffect(()=>{
         async function fetchData(){

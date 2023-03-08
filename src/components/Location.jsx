@@ -21,8 +21,6 @@ const Location = ({location}) => {
         }
         
     },[url])
-    console.log("number")
-    console.log(number)
 
     return ( 
         <div 

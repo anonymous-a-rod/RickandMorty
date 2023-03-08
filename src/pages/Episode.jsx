@@ -4,10 +4,7 @@ import Resident from "../components/Resident";
 
 const Episode = () => {
     const [episode, setEpisode] = useState(null)
-
     const param = useParams().episodeId;
-
-    console.log(episode)
 
     useEffect(()=>{
         async function fetchData(){

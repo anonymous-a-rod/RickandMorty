@@ -8,10 +8,6 @@ const Location = () => {
     const [number, setNumber] = useState(null);
     const param = useParams().LocationId;
 
-    console.log(info)
-
-
-
     useEffect(()=>{
         async function fetchData(){
             try{
@@ -43,8 +39,6 @@ const Location = () => {
         }
         
     },[url])
-    console.log("number")
-    console.log(number)
     
     return ( 
         <section>

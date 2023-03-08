@@ -19,8 +19,6 @@ const Character = ({resident}) => {
         fetchData()
     },[resident])
 
-    console.log(info)
-
     return ( 
         <>
         { info &&

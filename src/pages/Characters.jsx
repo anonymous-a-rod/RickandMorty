@@ -34,9 +34,6 @@ const Characters = () => {
           });
     }
 
-    console.log(characters)
-    console.log(info)
-
     return ( 
         <>
             <section className="w-full my-12">
