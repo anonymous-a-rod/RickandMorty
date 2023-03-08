@@ -26,7 +26,7 @@ const Location = () => {
                 <div className="bg-gray-900 mx-auto w-full rounded-xl shadow-md overflow-hidden max-w-lg" key={info.id}>
                 <div className="flex justify-center">
                   <div className="p-8 flex flex-col justify-center items-center">
-                    <div className="uppercase tracking-wide text-md mb-4 text-indigo-500 font-semibold">{info.name}</div>
+                    <div className="uppercase tracking-wide text-xl mb-4 text-indigo-500 font-semibold">{info.name}</div>
                     <p className="mt-2 text-gray-300">Type: {info.type}</p>
                     <p className="mt-2 text-gray-300">Dimension: {info.dimension}</p>
                     <p className="mt-2 text-gray-300">Residents: {info.residents.length}</p>

@@ -36,7 +36,8 @@ const Characters = () => {
 
     return ( 
         <>
-            <section className="w-full my-12">
+            <section className="w-full my-12 flex flex-col">
+            <h2 className="text-center w-full text-gray-200 font-semibold text-4xl mb-10">Characters</h2>
             <div className="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 px-8 mx-auto xl:max-w-[1200px] 2xl:max-w-[1800px]">
             {characters && characters.map((character) => (
                 <Character 
