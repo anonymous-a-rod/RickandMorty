@@ -11,7 +11,7 @@ const Question = ({title, info}) => {
         <button className='' onClick={()=> setShowInfo(!showInfo)}>
           <div className='rounded-full p-2'
             style={{ backgroundColor: 'var(--background-color4)', color: 'var(--text-color)'}}
-          >{showInfo? <AiOutlineMinus className='text-black' /> : <AiOutlinePlus /> }</div>
+          >{showInfo? <AiOutlineMinus /> : <AiOutlinePlus /> }</div>
         </button>
       </header>
       { showInfo && <p className='pr-16 mb-4 pl-2'>{info}</p>}

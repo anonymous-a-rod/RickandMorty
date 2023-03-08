@@ -4,8 +4,6 @@ import Resident from "../components/Resident";
 
 const Location = () => {
     const [info, setInfo] = useState(null)
-    const [url, setUrl] = useState(null);
-    const [number, setNumber] = useState(null);
     const param = useParams().LocationId;
 
     useEffect(()=>{
@@ -20,36 +18,14 @@ const Location = () => {
         }
         fetchData()
     },[param])
-
-
-
-
-    useEffect(()=>{
-        if(info){
-        const randomNumber = Math.floor(Math.random() * info.residents?.length)
-        setUrl(info.residents[randomNumber])    
-        }
-        
-    },[info])
-
-    useEffect(()=>{
-        if(url){
-          const number = url.split("/").pop();
-        setNumber(number)  
-        }
-        
-    },[url])
     
     return ( 
         <section>
             <div className="container mx-auto py-10">
             {info && (
-                <div className="bg-gray-900 mx-auto w-full rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={info.id}>
-                <div className="md:flex">
-                <div className="md:flex-shrink-0">
-                <img className="h-48 w-full object-cover md:h-full md:w-48" src={`https://rickandmortyapi.com/api/character/avatar/${number}.jpeg`} alt={info.name} />
-                </div>
-                  <div className="p-8">
+                <div className="bg-gray-900 mx-auto w-full rounded-xl shadow-md overflow-hidden max-w-lg" key={info.id}>
+                <div className="flex justify-center">
+                  <div className="p-8 flex flex-col justify-center items-center">
                     <div className="uppercase tracking-wide text-md mb-4 text-indigo-500 font-semibold">{info.name}</div>
                     <p className="mt-2 text-gray-300">Type: {info.type}</p>
                     <p className="mt-2 text-gray-300">Dimension: {info.dimension}</p>
