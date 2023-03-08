@@ -5,7 +5,7 @@ const Header = () => {
 
     return ( 
         <>
-            <nav className="flex shadow-md items-center justify-center bg-white text-black" >
+            <nav className="flex shadow-md items-center justify-center bg-white text-black px-4" >
                 <div className="w-full max-w-6xl flex flex-row justify-between items-center py-2">
                     <Link to="/">   
                         <img src="/assets/logo.png" className="h-10" alt="logo"/>

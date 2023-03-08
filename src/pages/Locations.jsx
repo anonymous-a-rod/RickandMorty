@@ -28,6 +28,10 @@ const Locations = () => {
         }catch(error){
             console.log(error);
         }
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
     }
 
     console.log(locations)
