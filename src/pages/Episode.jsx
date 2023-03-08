@@ -29,10 +29,10 @@ const Episode = () => {
                 <div className="mx-auto w-full bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={episode.id}>
                 <div className="md:flex">
                   <div className="p-8">
-                    <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{episode.name}</div>
-                    <p className="mt-2 text-gray-500">Air date: {episode.air_date}</p>
-                    <p className="mt-2 text-gray-500">Episode: {episode.episode}</p>
-                    <p className="mt-2 text-gray-500">Characters: {episode.characters.length}</p>
+                    <div className="uppercase tracking-wide text-md mb-4 text-indigo-500 font-semibold">{episode.name}</div>
+                    <p className="mt-2 text-gray-300">Air date: {episode.air_date}</p>
+                    <p className="mt-2 text-gray-300">Episode: {episode.episode}</p>
+                    <p className="mt-2 text-gray-300">Characters: {episode.characters.length}</p>
                   </div>
                 </div>
               </div>

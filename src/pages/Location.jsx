@@ -50,16 +50,16 @@ const Location = () => {
         <section>
             <div className="container mx-auto py-10">
             {info && (
-                <div className="bg-gray-900 mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={info.id}>
+                <div className="bg-gray-900 mx-auto w-full rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={info.id}>
                 <div className="md:flex">
                 <div className="md:flex-shrink-0">
                 <img className="h-48 w-full object-cover md:h-full md:w-48" src={`https://rickandmortyapi.com/api/character/avatar/${number}.jpeg`} alt={info.name} />
                 </div>
                   <div className="p-8">
-                    <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{info.name}</div>
-                    <p className="mt-2 text-gray-500">Type: {info.type}</p>
-                    <p className="mt-2 text-gray-500">Dimension: {info.dimension}</p>
-                    <p className="mt-2 text-gray-500">Residents: {info.residents.length}</p>
+                    <div className="uppercase tracking-wide text-md mb-4 text-indigo-500 font-semibold">{info.name}</div>
+                    <p className="mt-2 text-gray-300">Type: {info.type}</p>
+                    <p className="mt-2 text-gray-300">Dimension: {info.dimension}</p>
+                    <p className="mt-2 text-gray-300">Residents: {info.residents.length}</p>
                   </div>
                 </div>
               </div>

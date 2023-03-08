@@ -4,10 +4,10 @@ import Question from '../components/Question';
 
 const FAQ = () => {
   return (
-    <div>
-      <div className="max-w-3xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Frequently Asked Questions</h2>
-        <div className="bg-white rounded-lg shadow-md p-8">
+    <>
+      <div className="px-8 my-48 max-w-3xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-300 mb-8 ">Frequently Asked Questions</h2>
+        <div className="bg-gray-900 rounded-lg shadow-md p-8">
           <section className='info'>
             {data.map((question) => {
               return <Question key={question.id} {...question}/>
@@ -15,7 +15,7 @@ const FAQ = () => {
           </section>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

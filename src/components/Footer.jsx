@@ -4,8 +4,8 @@ const Footer = () => {
     return ( 
         <>
             <footer className="py-10 w-full flex justify-center absolute bottom-0">
-                <Link className="px-2" to="/About">About</Link>
-                <Link className="px-2" to="/FAQ">FAQ</Link>
+                <Link className="px-2" to="/about">About</Link>
+                <Link className="px-2" to="/faq">FAQ</Link>
             </footer>
         </>
      );
