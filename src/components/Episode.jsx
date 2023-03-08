@@ -30,9 +30,9 @@ const Episode = ({episode}) => {
         >
             <div className="md:flex">
             <div className="md:flex-shrink-0">
-            <img className="h-48 w-full object-cover md:h-full md:w-48" src={`https://rickandmortyapi.com/api/character/avatar/${number}.jpeg`} alt={episode.name} />
+            <img className="h-48 w-full object-cover md:h-52 md:w-52" src={`https://rickandmortyapi.com/api/character/avatar/${number}.jpeg`} alt={episode.name} />
             </div>
-            <div className="p-8">
+            <div className="pl-8 pt-8 pr-4 pb-8 xl:pb-4">
                 <div className="uppercase tracking-wide text-md mb-4 text-indigo-500 font-semibold">{episode.name}</div>
                 <p className="mt-2 text-gray-300">{episode.air_date}</p>
                 <p className="mt-2 text-gray-300">{episode.characters.length} characters</p>

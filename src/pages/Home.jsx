@@ -18,7 +18,7 @@ const Home = () => {
             <h1 className="text-center max-w-xs xl:max-w-lg text-white font-bold text-5xl">Rick and Morty</h1>
             </div>
             { randNum && 
-            <div className="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 px-8 mx-auto xl:max-w-[1200px] 2xl:max-w-[1800px]">
+            <div className="w-full grid grid-cols-1 xl:grid-cols-2 3xl:grid-cols-3 gap-4 px-8 mx-auto xl:max-w-[1200px] 3xl:max-w-[1800px]">
                 <Resident resident={`https://rickandmortyapi.com/api/character/${randNum}`} />
                 <Resident resident={`https://rickandmortyapi.com/api/character/${randNum+100}`} />
                 <Resident resident={`https://rickandmortyapi.com/api/character/${randNum+200}`} />

@@ -30,9 +30,9 @@ const Location = ({location}) => {
         >
         <div className="md:flex">
             <div className={`md:flex-shrink-0 h-full bg-gray-200`}>
-            <img className={`h-48 w-full object-cover  md:w-48 ${number? "" : "cover p-4"}`} src={number !== null? `https://rickandmortyapi.com/api/character/avatar/${number}.jpeg` : "assets/no-image-available-icon-6.png"} alt={location.name} />
+            <img className={`h-48 w-full object-cover md:h-56 md:w-52 ${number? "" : "cover p-4"}`} src={number !== null? `https://rickandmortyapi.com/api/character/avatar/${number}.jpeg` : "assets/no-image-available-icon-6.png"} alt={location.name} />
             </div>
-            <div className="p-8">
+            <div className="pl-8 pt-8 pr-4 pb-8 xl:pb-4">
             <div className="uppercase tracking-wide text-md mb-4 text-indigo-500 font-semibold">{location.name}</div>
             <p className="mt-2 text-gray-300">Type: {location.type}</p>
             <p className="mt-2 text-gray-300">Dimension: {location.dimension}</p>
