@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { FaCircle } from "react-icons/fa";
 
 const Character = () => {
     const [info, setInfo] = useState(null)
@@ -35,6 +36,8 @@ const Character = () => {
                     <h2 className="text-3xl font-bold mb-5">{info.name}</h2>
                     <div className="mb-5">
                     <span className="font-bold">Status:</span> {info.status}
+                    <FaCircle className={`inline text-md p-[3px] ml-1 mr-1 mb-[2px] ${info.status.toLowerCase() === "alive"? "text-green-500" : info.status.toLowerCase() === "dead"? "text-red-500" : "text-yellow-500"}`}/>
+                    
                     </div>
                     <div className="mb-5">
                     <span className="font-bold">Species:</span> {info.species}

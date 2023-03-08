@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaCircle } from "react-icons/fa"
 
 const Character = ({resident}) => {
     const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Character = ({resident}) => {
         <>
         { info &&
         <div 
-            className="mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl" 
+            className=" mx-auto w-full bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-xl cursor-pointer" 
             onClick={()=>navigate(`/character/${info.id}`)}
         >
             <div className="md:flex">
@@ -33,7 +34,10 @@ const Character = ({resident}) => {
                 </div>
                 <div className="p-8">
                 <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{info.name}</div>
-                    <p className="mt-2 text-gray-500">{info.status} - {info.species}</p>
+                    <p className="mt-2 text-gray-500">
+                        <FaCircle className={`inline text-md p-[3px] mr-1 mb-1 ${info.status.toLowerCase() === "alive"? "text-green-500" : info.status.toLowerCase() === "dead"? "text-red-500" : "text-yellow-500"}`}/> 
+                        {info.status} - {info.species}
+                    </p>
                     <p className="mt-2 text-gray-500">Last known location: {info.location.name}</p>
                 </div>
             </div>

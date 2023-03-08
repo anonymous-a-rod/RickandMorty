@@ -26,7 +26,7 @@ const Episode = ({episode}) => {
     return ( 
         <>
         <div 
-            className="mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl" 
+            className="bg-gray-900 mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl cursor-pointer" 
             onClick={()=>navigate(`/episode/${episode.id}`)}
         >
             <div className="md:flex">

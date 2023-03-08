@@ -24,10 +24,9 @@ const Episode = () => {
 
     return ( 
         <section>
-            hello rtrether 
             <div className="container mx-auto py-10">
             {episode && (
-                <div className="mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={episode.id}>
+                <div className="mx-auto w-full bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={episode.id}>
                 <div className="md:flex">
                   <div className="p-8">
                     <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{episode.name}</div>

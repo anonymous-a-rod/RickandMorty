@@ -45,11 +45,12 @@ const Location = () => {
     },[url])
     console.log("number")
     console.log(number)
+    
     return ( 
         <section>
             <div className="container mx-auto py-10">
             {info && (
-                <div className="mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={info.id}>
+                <div className="bg-gray-900 mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl" key={info.id}>
                 <div className="md:flex">
                 <div className="md:flex-shrink-0">
                 <img className="h-48 w-full object-cover md:h-full md:w-48" src={`https://rickandmortyapi.com/api/character/avatar/${number}.jpeg`} alt={info.name} />

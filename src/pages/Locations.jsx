@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import Location from "../components/Location";
 
-const Location = () => {
+const Locations = () => {
     const [locations, setLocations] = useState([]);
     const [info, setInfo] = useState([]);
-
-    const navigate = useNavigate();
 
     useEffect(()=>{
         async function fetchData(){
@@ -36,26 +34,10 @@ const Location = () => {
 
     return ( 
         <>
-            <section className="w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <section className="w-full mt-12">
+            <div className="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 px-8 mx-auto xl:max-w-[1200px] 2xl:max-w-[1800px]">
             {locations.map((location) => (
-                <div 
-                    className="mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl" 
-                    key={location.id}
-                    onClick={()=>navigate(`/location/${location.id}`)}
-                >
-                <div className="md:flex">
-                  <div className="md:flex-shrink-0">
-                    {/* <img className="h-48 w-full object-cover md:h-full md:w-48" src={location.url} alt={location.name} /> */}
-                  </div>
-                  <div className="p-8">
-                    <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{location.name}</div>
-                    <p className="mt-2 text-gray-500">Type: {location.type}</p>
-                    <p className="mt-2 text-gray-500">Dimension: {location.dimension}</p>
-                    <p className="mt-2 text-gray-500">Residents: {location.residents.length}</p>
-                  </div>
-                </div>
-              </div>
+                <Location location={location}/>
               
             ))}
             </div>
@@ -84,4 +66,4 @@ const Location = () => {
      );
 }
  
-export default Location;
+export default Locations;
